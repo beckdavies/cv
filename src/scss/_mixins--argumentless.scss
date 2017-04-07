@@ -1,0 +1,130 @@
+//
+// General use mixins, with no arguements
+// syntax:  .m-[]
+// -------------------------------------------------
+
+@mixin m-input-focus {
+	box-shadow: 0 0 1px 1px darken($color-primary, 20%);
+}
+
+// scss-lint:disable SpaceAfterPropertyColon
+@mixin m-right-shadow {
+	box-shadow:
+		0 2px 2px 0 $grey-translucent-014,
+		0 1px 5px 0 $grey-translucent-012,
+		0 3px 1px -2px $grey-translucent-02
+}
+// scss-lint:enable SpaceAfterPropertyColon
+
+
+@mixin m-bottom-shadow {
+	box-shadow: 0 3px 3px 0 $translucent-grey-shadow-light;
+}
+
+@mixin m-popover-shadow {
+	box-shadow: 0 0 5px $translucent-grey-shadow-medium;
+}
+
+@mixin m-sub-text {
+	color: $grey-medium;
+	font-family: $base-font-family;
+	font-size: .75rem;
+}
+
+@mixin m-disabled-input {
+	background: $grey-lightest;
+	border-color: $grey-light;
+	color: $grey-medium;
+	cursor: not-allowed;
+}
+
+@mixin m-disabled-link {
+	color: $grey-medium;
+
+	&:hover {
+		color: $grey-medium;
+		cursor: default;
+	}
+}
+
+@mixin m-no-results {
+	background: $grey-bkgrd;
+	text-align: center;
+	padding: 2rem 0;
+	margin: 1rem;
+
+	h3 {
+		padding: 0;
+		margin: 0;
+		color: $color-primary;
+		border: 0;
+	}
+
+	p {
+		margin: 1rem;
+		font-size: 1rem;
+		line-height: 1.6;
+	}
+
+	&--no-border {
+		border: 0
+	}
+
+	&--no-margin {
+		margin: 0
+	}
+
+}
+
+// @mixin m-status-badge {
+// 	padding: 3px 6px;
+// 	font-size: .75rem;
+// 	border-radius: $base-border-radius;
+// 	color: $grey-dark
+// }
+
+@mixin m-focused {
+	border-color: rgba($color-primary, .8);
+	outline: 0;
+	box-shadow: inset 0 1px 1px $grey-translucent-075, 0 0 6px rgba($color-primary, .8);
+	transition: border ease .2s, box-shadow ease .2s
+}
+
+@mixin m-clearfix {
+	&::after {
+		display: table;
+		clear: both;
+		content: '';
+	}
+}
+
+@mixin m-transition-all {
+	transition: all .3s ease;
+}
+
+@mixin m-display-iblock-middle {
+	display: inline-block;
+	vertical-align: middle
+}
+
+@mixin m-display-iblock-top {
+	display: inline-block;
+	vertical-align: top
+}
+
+@mixin m-display-iblock-bottom {
+	display: inline-block;
+	vertical-align: bottom
+}
+
+@mixin m-highlighted {
+	animation-name: pulse-bgcolour;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-direction: alternate;
+	animation-timing-function: ease-in-out;
+}
+
+
+
+

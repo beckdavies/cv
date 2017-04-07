@@ -1,25 +1,11 @@
-.testing {
-  width: percentage(6/7);
-}
-
-.testing3 {
-  width: percentage(5/7);
-}
-
-.testing4 {
-  width: percentage(5/7);
-}
-
-header {
-	height: 20vh;
-	border-bottom: 1px solid #ccc
-}
+//
+// Logo
+// --------------------------------------------------
 
 .logo {
 	height: 100%
 }
 
-	
 #bd-d {
 	animation-name: move-d;
 	animation-duration: 300ms;
@@ -181,8 +167,6 @@ header {
 
 
 #s_mask {
-	stroke-dasharray: 313;
-	stroke-dashoffset: 0;
 	stroke-dasharray: 283;
 	stroke-dashoffset: 0;
 	animation-name: dash_s;

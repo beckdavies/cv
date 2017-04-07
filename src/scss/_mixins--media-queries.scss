@@ -1,0 +1,20 @@
+//
+// Mixins for media queries
+// --------------------------------------------------
+
+$tablet-width: 780px;
+$desktop-width: 1024px;
+$dash-max: 1000px;
+
+@mixin break-min($val) {
+	@media screen and (min-width: $val)  {
+		@content;
+	}
+}
+
+// Max-width media query mixin
+@mixin break-max($val) {
+	@media screen and (max-width: $val)  {
+		@content;
+	}
+}
