@@ -1,0 +1,11 @@
+//
+// Typography - Set up font scale - uses variables
+// --------------------------------------------------
+
+body {
+ // -webkit-font-smoothing: antialiased;
+	font-family: $base-font-family;
+	line-height: $base-line-height;
+	color: $base-font-color;
+}
+

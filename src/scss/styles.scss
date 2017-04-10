@@ -3,8 +3,11 @@
 // --------------------------------------------------
 
 @import 'variables';
+@import 'reset';
+@import 'typography';
 @import 'mixins--argumentless';
 @import 'mixins--media-queries';
 @import 'header';
-@import 'logo';		
-@import 'skill';
+@import 'logo';	
+@import 'wrapper';		
+@import 'prog-bar';

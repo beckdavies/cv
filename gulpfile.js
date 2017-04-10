@@ -13,7 +13,7 @@ var paths = {
 
 gulp.task('sass', function(){
   return gulp.src(paths.styles.src)
-    .pipe(sass())
+    .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false

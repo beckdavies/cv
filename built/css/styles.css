@@ -1,6 +1,23 @@
+html {
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+body {
+  margin: 0; }
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.2;
+  color: #555; }
+
 header {
   height: 20vh;
-  border-bottom: 1px solid #ccc; }
+  border-bottom: 1px solid #ccc;
+  padding: 0 2rem; }
 
 .logo {
   height: 100%; }
@@ -146,30 +163,39 @@ header {
   to {
     stroke-dashoffset: 313; } }
 
-.skill {
+.wrapper {
+  margin: 2rem; }
+
+.prog-bar {
   height: 10vh; }
-  .skill::after {
+  .prog-bar::after {
     display: table;
     clear: both;
     content: ''; }
-  .skill + .skill {
-    margin-top: 10px; }
-  .skill__text {
+  .prog-bar + .prog-bar {
+    margin-top: 1rem; }
+  .prog-bar__text {
     width: 32%;
     float: left;
-    outline: 1px solid blue;
-    text-align: right; }
-  .skill__rating {
+    text-align: right;
+    font-size: 9vh;
+    line-height: 1;
+    color: #9b1212; }
+  .prog-bar__rating-bkgrd {
     width: 68%;
+    height: 100%;
     float: left;
     position: relative;
-    background-color: #ccc;
-    outline: 1px solid green; }
-  .skill__rating-inner {
+    background-color: #ddd;
+    border-radius: 999px; }
+  .prog-bar__rating-bar {
+    background: repeating-linear-gradient(125deg, #9b1212, #9b1212 12px, rgba(155, 18, 18, 0.1), 12px, rgba(155, 18, 18, 0.1) 24px);
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
-    background-color: #aaa;
     width: 70%;
-    outline: 1px solid red; }
+    border-radius: 999px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    background-color: #ddd; }

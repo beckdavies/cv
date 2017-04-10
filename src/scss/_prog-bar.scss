@@ -1,0 +1,47 @@
+//
+// Skills
+// --------------------------------------------------
+
+.prog-bar {
+
+	@include m-clearfix;
+	height: 10vh;
+
+	+ .prog-bar {
+		margin-top: 1rem
+	}
+
+	&__text {
+		width: 32%;
+		float: left;
+		text-align: right;
+		font-size: 9vh;
+    	line-height: 1;
+    	color: $dark-red
+	}
+
+	&__rating-bkgrd {
+		width: 68%;
+		height: 100%;
+		float: left;
+		position: relative;
+		background-color: $light-grey-d;
+		border-radius: 999px
+	}
+
+	&__rating-bar {
+		@include m-stripes(12px, $dark-red, .1);
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0; 
+		width: 70%;
+		border-radius: 999px;
+		border-bottom-left-radius: 0;
+		border-top-left-radius: 0;
+		background-color: $light-grey-d;
+
+	}
+
+}
+

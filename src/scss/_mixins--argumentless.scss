@@ -25,64 +25,6 @@
 	box-shadow: 0 0 5px $translucent-grey-shadow-medium;
 }
 
-@mixin m-sub-text {
-	color: $grey-medium;
-	font-family: $base-font-family;
-	font-size: .75rem;
-}
-
-@mixin m-disabled-input {
-	background: $grey-lightest;
-	border-color: $grey-light;
-	color: $grey-medium;
-	cursor: not-allowed;
-}
-
-@mixin m-disabled-link {
-	color: $grey-medium;
-
-	&:hover {
-		color: $grey-medium;
-		cursor: default;
-	}
-}
-
-@mixin m-no-results {
-	background: $grey-bkgrd;
-	text-align: center;
-	padding: 2rem 0;
-	margin: 1rem;
-
-	h3 {
-		padding: 0;
-		margin: 0;
-		color: $color-primary;
-		border: 0;
-	}
-
-	p {
-		margin: 1rem;
-		font-size: 1rem;
-		line-height: 1.6;
-	}
-
-	&--no-border {
-		border: 0
-	}
-
-	&--no-margin {
-		margin: 0
-	}
-
-}
-
-// @mixin m-status-badge {
-// 	padding: 3px 6px;
-// 	font-size: .75rem;
-// 	border-radius: $base-border-radius;
-// 	color: $grey-dark
-// }
-
 @mixin m-focused {
 	border-color: rgba($color-primary, .8);
 	outline: 0;
@@ -125,6 +67,31 @@
 	animation-timing-function: ease-in-out;
 }
 
+// @mixin m-stripes($size, $colour) {
+
+//   background-size: $size $size;
+//     background-image: linear-gradient(
+//       -45deg, 
+//       lighten($colour, 90%)  25%, 
+//       transparent 25%, 
+//       transparent 50%, 
+//       lighten($colour, 90%) 50%, 
+//       lighten($colour, 90%) 75%, 
+//       transparent 75%, 
+//       transparent
+//     );
+// }
+
+@mixin m-stripes($size, $colour, $alpha) {
+	background: repeating-linear-gradient(
+	  125deg,
+	  $colour,
+	  $colour $size,
+	  rgba($colour, $alpha), $size,
+	  rgba($colour, $alpha) $size*2
+	);
+}
 
 
 
+//linear-gradient(-45deg,#Ccc 25%,transparent 25%,transparent 50%,#ccc 50%,#CCC 75%,transparent 75%,transparent)
