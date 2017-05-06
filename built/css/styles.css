@@ -17,7 +17,12 @@ body {
 header {
   height: 20vh;
   border-bottom: 1px solid #ccc;
-  padding: 0 2rem; }
+  padding: 1rem 2rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 10; }
 
 .logo {
   height: 100%; }
@@ -173,14 +178,19 @@ header {
     clear: both;
     content: ''; }
   .prog-bar + .prog-bar {
-    margin-top: 1rem; }
+    margin-top: 2rem; }
   .prog-bar__text {
     width: 32%;
     float: left;
     text-align: right;
     font-size: 9vh;
     line-height: 1;
-    color: #9b1212; }
+    color: #a59393; }
+    .prog-bar__text svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      outline: 1px solid; }
   .prog-bar__rating-bkgrd {
     width: 68%;
     height: 100%;
@@ -189,7 +199,7 @@ header {
     background-color: #ddd;
     border-radius: 999px; }
   .prog-bar__rating-bar {
-    background: repeating-linear-gradient(125deg, #9b1212, #9b1212 12px, rgba(155, 18, 18, 0.1), 12px, rgba(155, 18, 18, 0.1) 24px);
+    background: repeating-linear-gradient(125deg, #a51c43, #a51c43 2%, #a59393 2%, #a59393 6%);
     position: absolute;
     top: 0;
     left: 0;

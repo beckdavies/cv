@@ -8,7 +8,7 @@
 	height: 10vh;
 
 	+ .prog-bar {
-		margin-top: 1rem
+		margin-top: 2rem
 	}
 
 	&__text {
@@ -17,7 +17,14 @@
 		text-align: right;
 		font-size: 9vh;
     	line-height: 1;
-    	color: $dark-red
+    	color: $brown;
+
+    	svg {
+    		display: block;
+    		width: 100%;
+    		height: 100%;
+    		outline: 1px solid;
+    	}
 	}
 
 	&__rating-bkgrd {
@@ -30,7 +37,7 @@
 	}
 
 	&__rating-bar {
-		@include m-stripes(12px, $dark-red, .1);
+		@include m-stripes(2%, 6%, $dark-red, $brown);
 		position: absolute;
 		top: 0;
 		left: 0;

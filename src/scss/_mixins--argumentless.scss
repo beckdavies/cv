@@ -82,13 +82,13 @@
 //     );
 // }
 
-@mixin m-stripes($size, $colour, $alpha) {
+@mixin m-stripes($size1, $size2, $colour1, $colour2) {
 	background: repeating-linear-gradient(
 	  125deg,
-	  $colour,
-	  $colour $size,
-	  rgba($colour, $alpha), $size,
-	  rgba($colour, $alpha) $size*2
+	  $colour1,
+	  $colour1 $size1,
+	  $colour2 $size1,
+	  $colour2 $size2
 	);
 }
 
