@@ -3,12 +3,23 @@
 // --------------------------------------------------
 
 header {
-	height: 20vh;
-	border-bottom: 1px solid #ccc;
+	height: 6rem;
+	border-bottom: 1px solid $light-grey-e;
 	padding: 1rem 2rem;
-	position: sticky;
-	top: 0;
-	background: #fff;
-	z-index: 10
-}
+	width: 100%;
+	border-top: 20px solid #9b1212;
+	background-color: $white-trans-95;
+	z-index: 10;
+	transition: height 0.3s;
 
+	&.is-smaller {
+		height: 5rem;
+		position: fixed;
+		top: -20px
+	}
+
+	&.is-smaller + .wrapper--skills {
+		padding-top: 5rem
+	}
+
+}

@@ -3,6 +3,10 @@
 // --------------------------------------------------
 
 .wrapper {
-	margin: 2rem
+	margin: 3rem;
+
+	&--skills {
+		padding-top: 0;
+	}
 }
 

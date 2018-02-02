@@ -3,20 +3,24 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     cleanCSS = require('gulp-clean-css'),
     rename = require('gulp-rename'),
-    uglify = require('gulp-uglify');
+    uglify = require('gulp-uglify'),
+    svgo = require('gulp-svgo');
 
 var paths = {
-      sass: {
-          src: 'src/scss/*.scss',
-          dest: 'built/css/'
-      },
-      js: {
-          src: 'src/js/*.js',
-          dest: 'built/js/'
-      },
+    sass: {
+        src: 'src/scss/*.scss',
+        dest: 'built/css/'
+    },
+    js: {
+        src: 'src/js/*.js',
+        dest: 'built/js/'
+    },
+    svg: {
+        src: 'src/svg/*.svg',
+        dest: 'built/svg/'
+    },
 
-    };
-
+  };
 
 // ---- //
 // SASS //
@@ -40,14 +44,24 @@ gulp.task('sass', function(){
 // -- //
 
 gulp.task('js', function() {  
-    return gulp.src(paths.js.src)
-        .pipe(gulp.dest(paths.sass.dest))
-        .pipe(rename('scripts.min.js'))
-        //.pipe(uglify())
-        .pipe(uglify().on('error', function(e){
-            console.log(e);
-         }))
-        .pipe(gulp.dest(paths.js.dest));
+  return gulp.src(paths.js.src)
+    .pipe(gulp.dest(paths.js.dest))
+    .pipe(rename('scripts.min.js'))
+    .pipe(uglify().on('error', function(e){
+        console.log(e);
+     }))
+    .pipe(gulp.dest(paths.js.dest));
+});
+
+
+// --- //
+// SVG //
+// --- //
+ 
+gulp.task('svg', function() {
+  return gulp.src(paths.svg.src)
+    .pipe(svgo())
+    .pipe(gulp.dest(paths.svg.dest));
 });
 
 
@@ -58,6 +72,7 @@ gulp.task('js', function() {
 gulp.task('watch', function(){
   gulp.watch(paths.sass.src, ['sass']);
   gulp.watch(paths.js.src, ['js']); 
+  gulp.watch(paths.svg.src, ['svg']); 
   // Other watchers
 })
 
