@@ -1,5 +1,7 @@
 ## About
 
+http://beckdavi.es
+
 Animating svg along a path with css using keyframe animations. This development environment uses gulp to prepare static files for deployment to production:
 
 * compile sass to css
