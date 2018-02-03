@@ -2,12 +2,15 @@
 // Master file
 // --------------------------------------------------
 
-@import 'variables';
-@import 'reset';
-@import 'typography';
-@import 'mixins--argumentless';
-@import 'mixins--media-queries';
-//@import 'header';
-@import 'logo';	
-// @import 'wrapper';		
-// @import 'prog-bar';
+@import 'variables',
+		'reset',
+		'typography',
+		'mixins--argumentless',
+		'mixins--media-queries',
+		'animations',
+		//'header',
+		'logo',
+		'main-content',
+		'wrapper',		
+		//'prog-bar',
+		'footer';

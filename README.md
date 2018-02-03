@@ -17,7 +17,3 @@ Wait for the node packages to install, then run:
 
     gulp watch
 
-
-## Documentation
-
-* (https://browsersync.io/docs)

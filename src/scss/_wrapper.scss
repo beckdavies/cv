@@ -3,10 +3,9 @@
 // --------------------------------------------------
 
 .wrapper {
-	margin: 3rem;
-
-	&--skills {
-		padding-top: 0;
-	}
+	display: flex;
+	flex-direction: column;
+	// Avoid the IE 10-11 `min-height` bug.
+	height: 100vh;
 }
 
